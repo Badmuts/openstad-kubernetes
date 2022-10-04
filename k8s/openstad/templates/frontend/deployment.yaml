@@ -151,6 +151,9 @@ spec:
             - name: NODE_TLS_REJECT_UNAUTHORIZED
               value: "0"
 {{- end }}
+          {{- if .Values.frontend.extraEnvVars }}
+          {{- include "common.tplvalues.render" (dict "value" .Values.frontend.extraEnvVars "context" $) | nindent 12 }}
+          {{- end }}
 
           resources:
 {{ toYaml .Values.frontend.resources | indent 12 }}

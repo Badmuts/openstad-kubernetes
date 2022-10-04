@@ -167,6 +167,9 @@ frontend:
     tls:
       secretName: openstad-tls-frontend
       hosts: []
+  
+  # Inject extra environment variables
+  extraEnvVars: []
 
   # Resources:
   resources:
@@ -312,6 +315,9 @@ auth:
       secretName: openstad-tls-auth
       hosts: []
 
+  # Inject extra environment variables
+  extraEnvVars: []
+
   # Resources:
   resources:
     # Max resources
@@ -379,6 +385,8 @@ admin:
     tls:
       secretName: openstad-tls-admin
       hosts: []
+  
+  extraEnvVars: []
 
   # Resources:
   resources:
@@ -451,6 +459,9 @@ api:
     tls:
       secretName: openstad-tls-api
       hosts: []
+  
+  # Inject extra environment variables
+  extraEnvVars: []
 
   # Resources:
   resources:
@@ -515,7 +526,10 @@ image:
     tls:
         secretName: openstad-tls-image
         hosts: []
-
+  
+  # Inject extra environment variables
+  extraEnvVars: []
+  
   # Resources:
   resources:
     # Max resources

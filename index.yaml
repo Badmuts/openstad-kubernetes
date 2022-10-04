@@ -3,7 +3,7 @@ entries:
   openstad:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T14:19:45.601878108Z"
+    created: "2022-10-04T14:21:50.663551902Z"
     dependencies:
     - condition: dependencies.cert-manager.enabled
       name: cert-manager
@@ -22,15 +22,42 @@ entries:
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
-    digest: a14f37164c8cfc90f0c96449c306025aa32c411c961c5da53c8344244dd7e573
+    digest: f05931b7c71fcee5b3c9a1263ee90230a90da7aa0d5362f480a7ad1d43863447
     icon: https://openstad.org/uploads/attachments/ckf3z5imd3w4pnl3w91not6qs-favicon-2x.svg
     name: openstad
     urls:
     - https://github.com/Badmuts/openstad-kubernetes/releases/download/openstad-0.2.4-beta-2/openstad-0.2.4-beta-2.tgz
     version: 0.2.4-beta-2
   - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-10-04T14:12:52.39048548Z"
+    dependencies:
+    - condition: dependencies.cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 0.15.1
+    - condition: dependencies.mongodb.enabled
+      name: mongodb
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.14.5
+    - condition: dependencies.mysql.enabled
+      name: mysql
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 6.14.2
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.3
+    description: This chart deploys the OpenStad Apostrophe project with optional
+      databases.
+    digest: 4d2899c0bbae2525d47b4ae6cc3af7abbc1fcfe16ca63c8582b1bd022006b379
+    icon: https://openstad.org/uploads/attachments/ckf3z5imd3w4pnl3w91not6qs-favicon-2x.svg
+    name: openstad
+    urls:
+    - https://github.com/Badmuts/openstad-kubernetes/releases/download/openstad-0.2.4-beta/openstad-0.2.4-beta.tgz
+    version: 0.2.4-beta
+  - apiVersion: v1
     appVersion: "1"
-    created: "2022-10-04T14:19:45.305743034Z"
+    created: "2022-10-04T14:12:52.213398505Z"
     dependencies:
     - condition: dependencies.cert-manager.enabled
       name: cert-manager
@@ -51,4 +78,4 @@ entries:
     urls:
     - https://github.com/Badmuts/openstad-kubernetes/releases/download/openstad-0.2.1/openstad-0.2.1.tgz
     version: 0.2.1
-generated: "2022-10-04T14:19:45.601910008Z"
+generated: "2022-10-04T14:21:50.663573302Z"

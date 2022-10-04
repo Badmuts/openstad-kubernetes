@@ -160,5 +160,9 @@ spec:
               secretKeyRef:
                 key: image_api_token
                 name: openstad-auth-credentials
+          {{- if .Values.admin.extraEnvVars }}
+          {{- include "common.tplvalues.render" (dict "value" .Values.admin.extraEnvVars "context" $) | nindent 10 }}
+          {{- end }}
+
         resources:
 {{ toYaml .Values.admin.resources | indent 12 }}

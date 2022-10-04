@@ -191,6 +191,9 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
+          {{- if .Values.auth.extraEnvVars }}
+          {{- include "common.tplvalues.render" (dict "value" .Values.auth.extraEnvVars "context" $) | nindent 10 }}
+          {{- end }}
 
         resources:
 {{ toYaml .Values.auth.resources | indent 12 }}

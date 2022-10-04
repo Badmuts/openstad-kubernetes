@@ -201,6 +201,9 @@ spec:
               fieldRef:
                 apiVersion: v1
                 fieldPath: status.podIP
+          {{- if .Values.api.extraEnvVars }}
+          {{- include "common.tplvalues.render" (dict "value" .Values.api.extraEnvVars "context" $) | nindent 10 }}
+          {{- end }}
           image: {{ .Values.api.deploymentContainer.image }}
           imagePullPolicy: Always
           name: {{ template "openstad.api.fullname" . }}

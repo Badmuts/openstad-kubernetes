@@ -3,7 +3,7 @@ entries:
   openstad:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2022-10-04T13:44:13.157179672Z"
+    created: "2022-10-04T13:57:05.07681391Z"
     dependencies:
     - condition: dependencies.cert-manager.enabled
       name: cert-manager
@@ -22,7 +22,7 @@ entries:
       version: 2.0.3
     description: This chart deploys the OpenStad Apostrophe project with optional
       databases.
-    digest: 12320dcd989a14b738171d96687006b29c38f2874d93ddbcd443c93e4ab9bcfa
+    digest: 71c39a01acc6d8d881ba78ab34dabb2b7b19e4a291267c74cd0d28869262ba1b
     icon: https://openstad.org/uploads/attachments/ckf3z5imd3w4pnl3w91not6qs-favicon-2x.svg
     name: openstad
     urls:
@@ -30,7 +30,7 @@ entries:
     version: 0.2.3
   - apiVersion: v1
     appVersion: "1"
-    created: "2022-10-04T13:44:12.838391922Z"
+    created: "2022-10-04T13:57:04.923081881Z"
     dependencies:
     - condition: dependencies.cert-manager.enabled
       name: cert-manager
@@ -51,4 +51,4 @@ entries:
     urls:
     - https://github.com/Badmuts/openstad-kubernetes/releases/download/openstad-0.2.1/openstad-0.2.1.tgz
     version: 0.2.1
-generated: "2022-10-04T13:44:13.157209272Z"
+generated: "2022-10-04T13:57:05.07682771Z"

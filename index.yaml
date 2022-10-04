@@ -30,6 +30,33 @@ entries:
     version: 0.2.4-beta-2
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2022-10-04T14:22:59.042873603Z"
+    dependencies:
+    - condition: dependencies.cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 0.15.1
+    - condition: dependencies.mongodb.enabled
+      name: mongodb
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 7.14.5
+    - condition: dependencies.mysql.enabled
+      name: mysql
+      repository: https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami
+      version: 6.14.2
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.3
+    description: This chart deploys the OpenStad Apostrophe project with optional
+      databases.
+    digest: 7c6f184f7c7a7efe0ce009d6e8f98972d61c4451e6b55045b0b60d26c08378a9
+    icon: https://openstad.org/uploads/attachments/ckf3z5imd3w4pnl3w91not6qs-favicon-2x.svg
+    name: openstad
+    urls:
+    - https://github.com/Badmuts/openstad-kubernetes/releases/download/openstad-0.2.4-beta-2/openstad-0.2.4-beta-2.tgz
+    version: 0.2.4-beta-2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2022-10-04T14:12:52.39048548Z"
     dependencies:
     - condition: dependencies.cert-manager.enabled
@@ -78,4 +105,4 @@ entries:
     urls:
     - https://github.com/Badmuts/openstad-kubernetes/releases/download/openstad-0.2.1/openstad-0.2.1.tgz
     version: 0.2.1
-generated: "2022-10-04T14:21:50.663573302Z"
+generated: "2022-10-04T14:22:59.042898704Z"

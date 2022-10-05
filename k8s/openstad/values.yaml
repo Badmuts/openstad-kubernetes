@@ -665,6 +665,12 @@ secrets:
     # Example: "mongodb://mongoadmin:mongoadmin@localhost:27017/sessions?authSource=admin"
     authConnectionString:
 
+    # The adminConnectionString will take priority over the above MongoDB configuration for the admin service
+    # Use {database} in this string to allow the application to specify the correct database
+    # Reference: https://www.mongodb.com/docs/manual/reference/connection-string/
+    # Example: "mongodb://mongoadmin:mongoadmin@localhost:27017/{database}?authSource=admin"
+    adminConnectionString:
+
   basicAuth:
     user:
     password:

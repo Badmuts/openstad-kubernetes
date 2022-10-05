@@ -593,6 +593,9 @@ secrets:
         adminClientId:
         adminClientSecret:
         imageApiToken:
+        # Only needed when you send SMS via KPN
+        kpnClientId:
+        kpnClientSecret:
 
     ### Overwrites for API db
     api:

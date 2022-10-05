@@ -179,6 +179,19 @@ spec:
 
           - name: DEFAULT_FAVICON
             value: {{ .Values.auth.defaultFavicon }}
+          
+          {{- if and .Values.secrets.database.auth.credentials.kpnClientId .Values.secrets.database.auth.credentials.kpnClientSecret }}
+          - name: KPN_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                key: kpn_client_id
+                name: openstad-kpn-credentials
+          - name: KPN_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                key: kpn_client_secret
+                name: openstad-kpn-credentials
+          {{- end }}
 
           # KUBERNETES
           - name: KUBERNETES_NAMESPACE
@@ -191,6 +204,7 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
+
           {{- if .Values.auth.extraEnvVars }}
           {{- include "common.tplvalues.render" (dict "value" .Values.auth.extraEnvVars "context" $) | nindent 10 }}
           {{- end }}

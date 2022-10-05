@@ -112,6 +112,7 @@ spec:
                   apiVersion: v1
                   fieldPath: metadata.namespace
 
+            {{- if (.Values.frontend.S3.bucket) }}
             - name: APOS_S3_BUCKET
               valueFrom:
                 secretKeyRef:
@@ -141,6 +142,7 @@ spec:
                 secretKeyRef:
                   key: region
                   name: openstad-frontend-s3
+            {{- end }}
 
             - name: MY_POD_IP
               valueFrom:
